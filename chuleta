@@ -1,0 +1,7 @@
+podman compose --profile apache up -d
+podman compose --profile apache down
+
+podman compose --profile nginx up -d
+podman compose --profile nginx down
+
+* Pon docker en lugar de podman si es docker lo que usas
