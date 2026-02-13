@@ -35,6 +35,9 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Ajuste de usuario
+# RUN usermod -u 1000 www-data
+
 COPY .podman/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html

@@ -30,4 +30,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Ajuste de usuario
+# RUN usermod -u 1000 www-data
+
 WORKDIR /var/www/html
