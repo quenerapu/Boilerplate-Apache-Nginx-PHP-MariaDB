@@ -30,6 +30,12 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Configuración PHP para subida de archivos (Sincronizado con apache.Dockerfile)
+RUN echo "upload_max_filesize = 10M" >> /usr/local/etc/php/conf.d/uploads.ini && \
+    echo "post_max_size = 20M" >> /usr/local/etc/php/conf.d/uploads.ini && \
+    echo "max_file_uploads = 20" >> /usr/local/etc/php/conf.d/uploads.ini && \
+    echo "memory_limit = 256M" >> /usr/local/etc/php/conf.d/uploads.ini 
+
 # Ajuste de usuario
 # RUN usermod -u 1000 www-data
 
