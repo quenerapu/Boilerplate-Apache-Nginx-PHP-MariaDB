@@ -1,0 +1,86 @@
+# --- Archivos de Respaldo ---
+OLD/
+
+# --- Archivos de Configuración Sensibles ---
+.env
+.env.local
+.env.*.local
+
+# --- Certificados SSL ---
+certs/
+*.pem
+*.key
+*.crt
+*.cert
+
+# --- Dependencias ---
+/vendor/
+node_modules/
+bower_components/
+
+# --- Archivos Temporales y Cache ---
+tmp_uploads/
+/tmp/
+*.cache
+*.tmp
+*.temp
+
+# --- Uploads (Opcional: comentar si quieres versionar uploads) ---
+uploads/
+# Si prefieres versionar algunos uploads, puedes hacer excepciones:
+# !uploads/.gitkeep
+# !uploads/default-avatar.png
+
+# --- Logs ---
+*.log
+logs/
+/var/log/
+
+# --- Archivos de Sistema Operativo ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# --- IDEs y Editores ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.project
+.settings/
+.buildpath
+
+# --- Composer ---
+composer.phar
+/vendor-autoload.php
+
+# --- PHP ---
+*.php~
+.phpunit.result.cache
+/phpunit.xml
+
+# --- Docker (opcional) ---
+# docker-compose.override.yml
+
+# --- Backup y archivos temporales del proyecto ---
+*_bkp.php
+*_old.php
+*_backup.php
+*(copy).*
+*.bak
+
+# --- Git ---
+.git/
+
+# --- Otros ---
+*.sql
+*.sqlite
+.htpasswd
